@@ -37,6 +37,8 @@ A comprehensive, multi-layered observability stack is in place to provide deep i
 
 - **Metrics & Monitoring:** A robust monitoring solution built with **Prometheus** (using the `kube-prometheus-stack` for seamless Kubernetes integration) and visualized with **Grafana**. Centralized Logging:** Deployed the **ELK Stack (Elasticsearch, Logstash, Kibana)** for powerful log aggregation and analysis, complemented by **Filebeat** as a lightweight log shipper on all nodes. Distributed Tracing & Service Mesh:** Utilized **Linkerd** as a service mesh to provide automatic mTLS, traffic shifting, and critical observability features like golden metrics (success rate, requests, and latency) and distributed tracing. 4. Resiliency & High Availability
 
+### 4. Resiliency & High Availability
+
 The platform is engineered to withstand failures and maintain high availability through proactive testing and resilient design patterns.
 
 - **Chaos Engineering:** Proactively test system resilience using **Chaos Mesh**. designed to simulate failures at various levels, including hardware, network, and Kubernetes pods, to identify and fix weaknesses before they impact users. Multi-Cloud Strategy:** The infrastructure is deployed across **GCP, AWS, and Azure\*\*, providing redundancy and preventing vendor lock-in. is a core component of our disaster recovery plan.
