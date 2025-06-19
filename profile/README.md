@@ -27,7 +27,7 @@ Security is not an afterthought but is deeply integrated into every layer of the
 - **Infrastructure & Image Security:**
   - Continuous vulnerability scanning of Kubernetes clusters in production using **Trivy Operator**.
   - Automated static code analysis and Docker image scanning with the **Trivy Action** integrated directly into the CI pipeline, preventing vulnerable code or images from reaching production.
-  - Secrets Management: Deployed a highly available **HashiCorp Vault** cluster (master-worker model) for centralized secrets and certificate management. The cluster's sealing status is managed securely and automatically using **Google Cloud KMS\*\*.
+  - Secrets Management: Deployed a highly available **HashiCorp Vault** cluster (master-worker model) for centralized secrets and certificate management. The cluster's sealing status is managed securely and automatically using **Google Cloud KMS**.
 - **Secure Registries:** All container images and artifacts are stored in a **Private Artifact Registry**, preventing unauthorized access and ensuring a trusted software supply chain.
 - **Access Control:**
   - Implemented strict **RBAC (Role-Based Access Control)** policies within Kubernetes to govern access to cluster resources. Adhered to the **Principle of Least Privilege** for all cloud resources by creating fine-grained **IAM Policies** and Service Accounts for both human and machine access.
@@ -42,7 +42,7 @@ A comprehensive, multi-layered observability stack is in place to provide deep i
 
 The platform is engineered to withstand failures and maintain high availability through proactive testing and resilient design patterns.
 
-- **Chaos Engineering:** Proactively test system resilience using **Chaos Mesh**. designed to simulate failures at various levels, including hardware, network, and Kubernetes pods, to identify and fix weaknesses before they impact users. Multi-Cloud Strategy:** The infrastructure is deployed across **GCP, AWS, and Azure\*\*, providing redundancy and preventing vendor lock-in. is a core component of our disaster recovery plan.
+- **Chaos Engineering:** Proactively test system resilience using **Chaos Mesh**. designed to simulate failures at various levels, including hardware, network, and Kubernetes pods, to identify and fix weaknesses before they impact users. Multi-Cloud Strategy:** The infrastructure is deployed across **GCP, AWS, and Azure**, providing redundancy and preventing vendor lock-in. is a core component of our disaster recovery plan.
 - **State Management:** Terraform state is securely managed in a versioned **Amazon S3 bucket** with native lock files, ensuring consistency and safe collaboration without relying on DynamoDB.
 
 ### 5. Infrastructure as Code (IaC) & Automation
@@ -58,7 +58,7 @@ Automation is the foundation of this platform, from infrastructure provisioning 
 The architecture is designed for high performance and can scale dynamically to meet demand, with a strong focus on performance testing.
 
 - **Comprehensive Performance Testing:** Implemented a robust performance testing suite using **Locust**. stress tests, load tests, spike tests, and endurance tests to fully understand system behavior under pressure.
-- **Dynamic Scaling for Testing:** Leveraged **KEDA (Kubernetes-based Event-driven Autoscaling)** to dynamically deploy and scale performance-testing worker nodes based on demand, enabling efficient and powerful load generation without maintaining a large, idle testing infrastructure. Application Architecture:** The application itself consists of **Spring Boot microservices** using **Spring Cloud with Netflix Eureka\*\* for service discovery, a pattern proven for building scalable and resilient systems.
+- **Dynamic Scaling for Testing:** Leveraged **KEDA (Kubernetes-based Event-driven Autoscaling)** to dynamically deploy and scale performance-testing worker nodes based on demand, enabling efficient and powerful load generation without maintaining a large, idle testing infrastructure. Application Architecture:** The application itself consists of **Spring Boot microservices** using **Spring Cloud with Netflix Eureka** for service discovery, a pattern proven for building scalable and resilient systems.
 
 ---
 
