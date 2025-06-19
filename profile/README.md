@@ -26,7 +26,8 @@ Security is not an afterthought but is deeply integrated into every layer of the
 
 - **Infrastructure & Image Security:**
   - Continuous vulnerability scanning of Kubernetes clusters in production using **Trivy Operator**.
-  - Automated static code analysis and Docker image scanning with the **Trivy Action** integrated directly into the CI pipeline, preventing vulnerable code or images from reaching production. Secrets Management:** Deployed a highly available **HashiCorp Vault** cluster (master-worker model) for centralized secrets and certificate management. The cluster's sealing status is managed securely and automatically using **Google Cloud KMS\*\*.
+  - Automated static code analysis and Docker image scanning with the **Trivy Action** integrated directly into the CI pipeline, preventing vulnerable code or images from reaching production.
+  - Secrets Management: Deployed a highly available **HashiCorp Vault** cluster (master-worker model) for centralized secrets and certificate management. The cluster's sealing status is managed securely and automatically using **Google Cloud KMS\*\*.
 - **Secure Registries:** All container images and artifacts are stored in a **Private Artifact Registry**, preventing unauthorized access and ensuring a trusted software supply chain.
 - **Access Control:**
   - Implemented strict **RBAC (Role-Based Access Control)** policies within Kubernetes to govern access to cluster resources. Adhered to the **Principle of Least Privilege** for all cloud resources by creating fine-grained **IAM Policies** and Service Accounts for both human and machine access.
